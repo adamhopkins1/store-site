@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/store-styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>The Store</title>
+</head>
+<body>
+
+    <!-- Container Start -->
+    <div class="container-fluid mt-2">
+    
+        <!-- Navigation Bar Start -->
+        <nav class="navbar navbar-expand-lg border-bottom pb-3">
+
+
+            <a class="navbar-brand" href="#"><img src="images/store-name.png" class="img-fluid me-2"></a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDropdown">
+                <span class="bi bi-caret-down-fill"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapseDropdown">
+
+            <div class="navbar-nav m-auto fw-bold">
+                <a class="nav-link custom-menu" href="link-home.html">Home</a>
+                <a class="nav-link custom-menu" href="link-news.html">News</a>
+                <a class="nav-link custom-menu" href="link-about.html">About</a>
+                <a class="nav-link custom-menu" href="link-contact.html">Contact</a>
+            </div>
+
+            <div class="navbar-nav">
+
+                <div class="dropdown">
+                    <a class="nav-link custom-menu custom-font-smaller dropdown-toggle" href="#" data-bs-toggle="dropdown"><span class="bi bi-person-fill"></span>My Account</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
+                    <a class="dropdown-item" href="link-create-account.html">Create Account</a>
+                    <a class="dropdown-item" href="link-view-orders.html">View Orders</a>
+                    <a class="dropdown-item" href="link-gift-card-balance.html">Gift Card Balance</a>
+                </div>  
+            </div>
+
+                <a class="nav-link custom-menu custom-font-smaller" href="#cartSidebar" data-bs-toggle="offcanvas"><span class="bi bi-cart-fill"></span>My Cart</a>
+            
+            </div>
+
+            <form class="form-inline ms-2" action="form-processing.php" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm custom-form-blue" name="searchKeyword" placeholder="Search">
+                    <button type="submit" class="btn btn-sm custom-btn-blue"><span class="bi bi-search"></span></button>
+                </div>
+            </form>
+
+
+
+
+
+        </nav>
+        <!-- Navigation Bar End -->
+
+
+        </div>
+    <!-- Container End -->
+
+    <!-- Modal for Sign In Form Start -->
+  <div class="modal fade" id="signInModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form action="form-processing.php" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign in</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="form-group">
+                    <label>User ID</label>
+                    <input type="text" class="form-control custom-form-blue" name="userID">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control custom-form-blue" name="userPassword">
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn custom-btn-blue" value="Sign In">
+                    <input type="reset" class="btn btn-secondary" value="Clear">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+   <!--Modal for Sign In Form End -->
+
+   <!-- Sidebar Start -->
+   <div class="offcanvas offcanvas-end custom-bg-blue text-white" tabnindex="-1" id="cartSidebar" data-bs-backdrop="false" data-bs-scroll="true">
+    <div class="offcanvas-header">
+    <h3 class="offcanvas-title" id="offcanvasLabel"><i class="bi bi-cart-fill"></i></h3>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      Your cart is empty  
+    </div>
+</div>
+   <!-- Sidebar End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+</body>
+</html>

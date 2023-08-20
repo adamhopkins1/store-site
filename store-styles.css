@@ -1,0 +1,49 @@
+.custom-menu{
+    color:#f4d570;
+}
+
+.custom-menu:hover{
+    color:#6A85D4;
+}
+
+.custom-menu:focus{
+    color:#8666F3;
+}
+
+.custom-menu:active{
+    color:#cfae44;
+}
+
+.custom-font-smaller{
+    font-size:0.8rem;
+}
+
+.custom-form-blue{
+    border:2px solid #18206f;
+}
+
+.custom-form-blue:focus{
+    border:2px solid #18206f;
+    box-shadow:0 0 0.1rem 0.1rem #d4af37;
+}
+
+.custom-btn-blue{
+    color:#90ee90 !important;
+    background-color:#c41e3a;
+    border:2px solid #18206f;
+}
+
+.custom-btn-blue:hover{
+    color:#c41e3a;
+    background-color:#cc7722;
+}
+
+.custom-btn-blue:focus{
+    color:#18206f;
+    background-color:#c41e3a;
+    box-shadow:0px 0px 0rem 0.2rem #c41e3a;
+}
+
+.custom-bg-blue{
+    background-color:deepskyblue;
+}
